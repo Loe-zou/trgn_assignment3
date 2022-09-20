@@ -8,7 +8,7 @@ Three scripts of the assignment is listed and denoted as follows:
 ## Usage
 python3 extract_phonenum.py mytextfile.txt
 ## Description
-Extracts phone number from a specific text called ==mytextfile.txt== and prints the formated phone number
+Extracts phone number from a specific text called *mytextfile.txt* and prints the formated phone number
 The phone number is reformatted as 
 ## Known Issues
 1.Can't distinguish the number 
