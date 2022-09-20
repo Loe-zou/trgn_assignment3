@@ -17,7 +17,12 @@ The phone number is reformatted as
 
 # 2. ensg2hugo.py
 ## Usage
+python3 ensg2hugo.py [-f][0-9] [file]
 ## Description
+Mimicing the way how we look up for Ensembl name in Homo_sapiens.GRCh37.75.gtf to be replaced by HUGO name
+The way to get Homo_sapiens.GRCh37.75.gtf file: 
+wget http://ftp.ensembl.org/pub/release-75/gtf/homo_sapiens/Homo_sapiens.GRCh37.75.gtf.gz
+unzip it using **gunzip**
 ## Known Issues
 
 
