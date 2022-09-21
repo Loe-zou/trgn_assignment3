@@ -74,8 +74,8 @@ Creates a histogram as a png from a file using the specified column in a tab del
 ## Known Issues
 - Current Logic as follows: (file just created)
 - Import and use pandas 
-- `pip install pandas' or `pip3 install pandas'
-- also `pip install numpy' or `pip3 install numpy'
+- `pip install pandas' or `pip3 install pandas`
+- also `pip install numpy' or `pip3 install numpy`
 - please see the source file named `histogram.py` in `scripts`
 
 ### edited on Sept 20, 2021
