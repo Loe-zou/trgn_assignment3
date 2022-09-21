@@ -51,7 +51,8 @@ wget http://ftp.ensembl.org/pub/release-75/gtf/homo_sapiens/Homo_sapiens.GRCh37.
 ```
 2. Unzip the file `gunzip Homo_sapiens.GRCh37.75.gtf.gz`
 3. Unit test file called 'expres.anal.csv' found on ``git clone https://github.com/davcraig75/unit``
-4. cd to the source file 'unit' and move it to the assignment 4 directory 'mv expres.anal.csv ~/trgn510_assignment4/scripts'
+4. cd to the source file 'unit' and move it to the assignment 4 directory 
+   ``mv expres.anal.csv ~/trgn510_assignment4/scripts``
 
 ## Known Issues
 - 
