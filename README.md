@@ -59,7 +59,7 @@ wget http://ftp.ensembl.org/pub/release-75/gtf/homo_sapiens/Homo_sapiens.GRCh37.
 - ##now we have created a dictionary matching all ENSG2HUGO, next step is to apply the dictionary to the source file to replace Ensembl to Hugo
   ##to be continued and edited by Friday 
 - might occur a prob calling out the file, to be tested on the server and git clone
-- 
+- TBC
 
 # 3. histogram.py
 ## Usage
@@ -74,8 +74,8 @@ Creates a histogram as a png from a file using the specified column in a tab del
 ## Known Issues
 - Current Logic as follows: (file just created)
 - Import and use pandas 
-- `pip install pandas' or `pip3 install pandas`
-- also `pip install numpy' or `pip3 install numpy`
+- `pip install pandas` or `pip3 install pandas`
+- also `pip install numpy` or `pip3 install numpy`
 - please see the source file named `histogram.py` in `scripts`
 
 ### edited on Sept 20, 2021
