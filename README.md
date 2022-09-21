@@ -5,7 +5,7 @@
 
 
 
-**Three scripts of the assignment is listed and denoted as follows:**
+**Three scripts of the assignment is listed and described below:**
 
 
 # 1. extract_phonenum.py
@@ -51,16 +51,36 @@ wget http://ftp.ensembl.org/pub/release-75/gtf/homo_sapiens/Homo_sapiens.GRCh37.
 ```
 2. Unzip the file `gunzip Homo_sapiens.GRCh37.75.gtf.gz`
 3. Unit test file called 'expres.anal.csv' found on ``git clone https://github.com/davcraig75/unit``
+  - or instead, gunzip the file within scripts called `expression_results.csv.zip`
 4. cd to the source file 'unit' and move it to the assignment 4 directory 
    ``mv expres.anal.csv ~/trgn510_assignment4/scripts``
 
-## Known Issues
-- 
-- 
+## Known Issues (updated Sep21)
+- ##now we have created a dictionary matching all ENSG2HUGO, next step is to apply the dictionary to the source file to replace Ensembl to Hugo
+  ##to be continued and edited by Friday 
+- might occur a prob calling out the file, to be tested on the server and git clone
 - 
 
 # 3. histogram.py
 ## Usage
-## Description
-## Known Issues
+```python3 histogram.py [-f][0-9] [file]```
 
+## Description
+Creates a histogram as a png from a file using the specified column in a tab delimited file.
+
+## Hypothetical Example
+- Can use the same one `expression_results.csv.zip` within the same direcotry 'scripts'
+
+## Known Issues
+- Current Logic as follows: (file just created)
+- Import and use pandas 
+- `pip install pandas' or `pip3 install pandas'
+- also `pip install numpy' or `pip3 install numpy'
+- please see the source file named `histogram.py` in `scripts`
+
+### edited on Sept 20, 2021
+### contact me if u have questions at 
+```
+zoul@usc.edu
+```
+###Thanks :)
