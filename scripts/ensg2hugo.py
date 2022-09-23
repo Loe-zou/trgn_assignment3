@@ -27,17 +27,24 @@ with open(gene) as file:
                   ENSG [ensg[0]]=hugo[0]
                   #print (ENSG)
                     
-# Extract lines from source File and append to a new lines where ENSG is replaced into HUGO
+# Extract lines from source File and append to a new lines list where ENSG is replaced into HUGO
 
 new_list = []
 
 with open (File, 'r') as F:
-  #copy the header line to new list:
-  first_line = F.readline()
-  new_list.append(first_line)
-  for line in file:
-    ensg = line.split(:,")
-    match = re
+    #append header
+    first_line = F.readline()
+    new_list.append(first_line)
+    
+    for line in F:
+        ensg = line.split(",")
+        matches = re.match(r'\"(\S*?).\S*?\", ensg[col])
+        if matches:
+                           
+  
+  
+    
+  
       
     
      
