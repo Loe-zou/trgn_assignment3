@@ -1,29 +1,49 @@
 import re
 import sys
-# import gffutils
-##I considered using gffutils but it's a little complex to extract specific column out
+# import pandas as pd
+# import numpy as np
+
 
 # Create a dictionary searching for ensg genes
 
 
 gene = "Homo_sapiens.GRCh37.75.gtf"
-File = str(sys.argv[1]) # convert the testing file into string
+File = str(sys.argv[1]) ##convert the testing file into string from the first argument
 
-# if inputFile[:2] == "-f":
-#     col = int(inputFile[-1])
-#     inputFile = str(sys.argv[2])
+if File[:2] == "-f":
+    col = int(File[-1]) ##minus one due to index, now col becomes the target column number
+    File = sys.argv[2]
+else:
+    col = 1
+    File = sys.argv[1] ##if -f is missing
 
 ENSG = {}
-with open(gene) as g:
-  for line in g:
-    for match in re.findall(r' gene_id\s\"(\S+)\"\;.gene_name\s\"(\S+)\"\;', line): 
-      #now we have matched ensg name and hugo name in two groups, we can add them into dictionary
-      ENSG [match[0]] = match [1]
-   
-  
-  ##now we have created a dictionary matching all ENSG2HUGO, next step is to apply the dictionary to the source file to replace Ensembl to Hugo
-  ###to be continued and edited by Friday                          
-                            
+with open(gene) as file:
+    for line in file:
+          ensg = re.findall(r'ENSG\d{11,}', line, re.I)
+          hugo = re.findall(r'gene_name\s\"(\S+)\"', line, re.I)
+          if ensg:
+              if hugo:
+                  ENSG [ensg[0]]=hugo[0]
+                  #print (ENSG)
+                    
+# Extract lines from source File and append to a new lines where ENSG is replaced into HUGO
+
+new_list = []
+
+with open (File, 'r') as F:
+  #copy the header line to new list:
+  first_line = F.readline()
+  new_list.append(first_line)
+  for line in file:
+    ensg = line.split(:,")
+    match = re
+      
+    
+     
+      
+
+    
                           
     
 
