@@ -37,11 +37,20 @@ with open (File, 'r') as F:
     new_list.append(first_line)
     
     for line in F:
-        ensg = line.split(",")
-        matches = re.match(r'\"(\S*?).\S*?\", ensg[col])
+        ensg2 = line.split(",")
+        matches = re.match(r'\"(ENSG\S*?.\S*?)\", ensg[col], ensg2[col]) #only need the ID before the dot to match
         if matches:
+               ID = matches.group(1)
+               if ENSG.get(ID) is True:
+                           ensg2[col] = '"' + ENSG[ID] + '"'
+                          
+               else:
+                           ensg2[col] = "N/A"
+               new_list.append(ensg2)
                            
-  
+print (new_list)                           
+                             
+    
   
     
   
