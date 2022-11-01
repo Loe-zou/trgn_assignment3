@@ -77,9 +77,9 @@ Creates a histogram as a png from a file using the specified column in a *tab de
 - Works fine on tsv, need to replace "\t" to "," to cope with csv plotting.
 
 
-### edited on Oct 31, 2022
-### contact me if u have questions at 
+### Edited on Oct 31, 2022
+### Contact me if u have questions at 
 ```
 zoul@usc.edu
 ```
-###Thanks :)
+
