@@ -5,7 +5,7 @@
 
 *remember to `git clone Loe-zou/trgn_assignment3` first to get all the documents to be tested on the server.*
 
-**Three scripts of the assignment is listed and described below:**
+**Three scripts of the assignment is listed and described below (make sure to have all the unit test file to be downloaded and placed at the same location with the python file to work):**
 
 
 # 1. extract_phonenum.py
