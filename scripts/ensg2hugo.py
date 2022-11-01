@@ -1,21 +1,15 @@
+#!/usr/bin/python
 import re
 import sys
+import fileinput
 # import pandas as pd
 # import numpy as np
+#pandas dataframe is quicker but decided to use the tranditional way
 
 
-# Create a dictionary searching for ensg genes
-
+### Create a dictionary searching for ensg genes
 
 gene = "Homo_sapiens.GRCh37.75.gtf"
-File = str(sys.argv[1]) ##convert the testing file into string from the first argument
-
-if File[:2] == "-f":
-    col = int(File[-1]) ##minus one due to index, now col becomes the target column number
-    File = sys.argv[2]
-else:
-    col = 1
-    File = sys.argv[1] ##if -f is missing
 
 ENSG = {}
 with open(gene) as file:
@@ -26,37 +20,33 @@ with open(gene) as file:
               if hugo:
                   ENSG [ensg[0]]=hugo[0]
                   #print (ENSG)
-                    
-# Extract lines from source File and append to a new lines list where ENSG is replaced into HUGO
+                    #Test point here - dictionary check
+                
+                
+###Match and replace  
 
-new_list = []
+File = str(sys.argv[1]) ##convert the testing file into string from the first argument
 
-with open (File, 'r') as F:
-    #append header
-    first_line = F.readline()
-    new_list.append(first_line)
+if File[:2] == "-f":
+    col = int(File[-1]) ##minus one due to index, now col becomes the target column number
+    File = sys.argv[2]
+else:
+    col = 1
+    File = sys.argv[1] ##if -f is missing
     
-    for line in F:
-        ensg2 = line.split(",")
-        matches = re.match(r'\"(ENSG\S*?.\S*?)\", ensg[col], ensg2[col]) #only need the ID before the dot to match
-        if matches:
-               ID = matches.group(1)
-               if ENSG.get(ID) is True:
-                           ensg2[col] = '"' + ENSG[ID] + '"'
-                          
-               else:
-                           ensg2[col] = "N/A"
-               new_list.append(ensg2)
-                           
-print (new_list)                           
-                             
-    
-  
-    
-  
-      
-    
-     
+with open(File) as f:
+    First = True
+    for line in f:
+        if not First:
+            split = line.split(",") #for csv only, not tsv
+            match = re.findall("([^,]+),", line)[col - 1]
+            match = re.findall("[^\"\s]+", match)[0]
+            Sub = re.findall("[^\.]+", match)[0]         #find all ensg matches in the column, this ensures multiple appearance can be matched as well
+            split[col - 1] = split[col - 1].replace(match, ENSG.get(Sub, match)) #substituted according to the dictionary on line 22
+            line = ",".join(split)
+        First = False    
+            
+        print(line) #print the result into a list, can be appended to a tsv file as well
       
 
     
