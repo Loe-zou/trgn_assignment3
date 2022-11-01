@@ -60,9 +60,10 @@ wget http://ftp.ensembl.org/pub/release-75/gtf/homo_sapiens/Homo_sapiens.GRCh37.
 5. The unit test run file `expression_results.tsv` is already placed in the `scripts`
 
 ## Known Issues (updated Oct 31)
+- Depends on the file input, if not working or replacing, try using ```-f2``` to test and show Hugo replacement (sometimes not replacing so need to enter the else column to replace Ensg into Hugo)
 - The dictionary works, can test it out by uncommenting `print (ENSG)` ;
 - The column has to be no bigger than 9, and column 0 will be converted to the last column;
-- The end output is a list, can be appended to a new tsv file seperately (or simply copy and paste).
+- The end output is a list, can be appended to a new tsv file seperately (or simply copy and paste). Can be fixed by using file = File function, but needs to make the file executable with 'open' function, now only either readable or writable.
 
 # 3. histogram.py
 ## Usage
