@@ -5,7 +5,7 @@ from matplotlib import pyplot as plt
 
 
 
-if sys.argv[:1] == "-f":
+if "-f" in sys.argv[1]:
     n = sys.argv[1]
     column = int(n[2])
 else:
@@ -25,7 +25,6 @@ data = pd.read_csv(sys.argv[2], sep='\t', header=0)
 
 col = data.columns[column]
 ax = data.loc[:,col]
-
 
 plot = ax.plot.hist()                     
 
