@@ -33,7 +33,7 @@ The phone number is reformatted as [+][country code] ([AreaCode]) [local phone n
 
 ## Usage
 ```
-python3 ensg2hugo.py [-f][0-9] [file] on the server
+python3 ensg2hugo.py [-f][0-9] [file] 
 ```
 
 ## Description
