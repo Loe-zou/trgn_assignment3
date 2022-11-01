@@ -13,8 +13,10 @@
 ## Usage
 
 ```
-python3 extract_phonenum.py mytextfile.txt
+python3 extract_phonenum.py [file]
 ```
+
+> feel free to use ```'mytextfile.txt'``` added in this repository to test out.
 
 ## Description
 
@@ -24,7 +26,6 @@ The phone number is reformatted as [+][country code] ([AreaCode]) [local phone n
 
 ## Known Issues
 
-- Can only test the file named *mytextfile.txt*
 - It takes hyphon as space delimiter to group and reformat the number, therefore the phone numbers without hyphen delimited will be unable to be reformated
 - For now only the second set of number will be bracketed, so for domestic one without country number the round bracketed number might be off-target
 
