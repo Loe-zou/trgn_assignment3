@@ -1,7 +1,9 @@
 ##Q1 extract phone number
 import re
 import sys
-file = open('mytextfile.txt','r')
+
+
+file = open(str(sys.argv[1]),'r')
 text = file.read()
 
 # print (text)
@@ -45,6 +47,3 @@ for s in extract:
         final = "".join(map(str,ls))
              
     print(final)
-
-        
-        
