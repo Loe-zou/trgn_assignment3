@@ -16,7 +16,7 @@
 python3 extract_phonenum.py [file]
 ```
 
-> feel free to use ```mytextfile.txt``` attached in this repository to test out the '''[file]```
+> feel free to use ```mytextfile.txt``` attached in this repository to test out the ```[file]```
 
 ## Description
 
