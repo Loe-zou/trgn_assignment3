@@ -56,28 +56,27 @@ wget http://ftp.ensembl.org/pub/release-75/gtf/homo_sapiens/Homo_sapiens.GRCh37.
    ``mv expres.anal.csv ~/trgn510_assignment4/scripts``
 5. The unit test run file `expression_results.tsv` is already placed in the `scripts`
 
-## Known Issues (updated Sep21)
+## Known Issues (updated Oct 31)
 - The dictionary works, can test it out by uncommenting `print (ENSG)` ;
-- The second part with appending matches (ensg to hugo) into new_list has some indentation errors yet to be found, but the replacement is working by test printing the steps in betweem;
-- There might be some indentation errors in the second part upon pasting from jupyter lab, if the test run show the error, `vi ensg2hugo.py` to edit the error line by deleting the redundant indentations, otherwise the replacement should work;
-- The end output is a list, might need to print each lines in a for loop but the result is still the same just looks a bit messy for now.
+- The column has to be no bigger than 9, and column 0 will be converted to the last column;
+- The end output is a list, can be appended to a new tsv file seperately (or simply copy and paste).
 
 # 3. histogram.py
 ## Usage
 ```python3 histogram.py [-f][0-9] [file]```
 
 ## Description
-Creates a histogram as a png from a file using the specified column in a tab delimited file.
+Creates a histogram as a png from a file using the specified column in a *tab delimited* file.
 
 ## Hypothetical Example
 - Can use the same one `expression_results.tsv` within the same direcotry 'scripts'
 
 ## Known Issues
-- It works and prints the histogram in the jupyter lab but fails when applying sys.argv on the server
-- I will send an email indicating the runable scripts on jupyter and the error bar shown in the terminal, Bigy and I tried entire morning to work it out but still failed
+- The column selection is limited within 9, and need to make sure the column has floats or numerics only;
+- Works fine on tsv, need to replace "\t" to "," to cope with csv plotting.
 
 
-### edited on Sept 20, 2021
+### edited on Oct 31, 2022
 ### contact me if u have questions at 
 ```
 zoul@usc.edu
